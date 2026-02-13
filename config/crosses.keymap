@@ -1,13 +1,4 @@
-
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
-
-#include <zmk-helpers/helper.h>
-#include "zmk-helpers/key-labels/36.h"
-
-#include "definitions.dtsi"
-#include "behaviors.dtsi"
+#include "links.dtsi"
 
 / {
     chosen { zmk,physical-layout = &gggw_crosses_36_layout; };
@@ -17,6 +8,42 @@
 
         default_layer {
             display-name = "Base";
+            bindings = <
+&kp Q      &kp W     &kp E     &kp R     &kp T                            &kp Y            &kp U     &kp I     &kp O     &kp P
+HML_C(A)   HML_A(S)  HML_G(D)  HML_S(F)  &kp G                            &kp H            HMR_S(J)  HMR_G(K)  HMR_A(L)  HMR_C(SQT)
+&kp GRAVE  &kp Z     &kp X     &kp C     &kp V                            &kp B            &kp N     &kp M     &kp_cs    &kp_pc
+                               &kp TAB   &mo LOWER  &td_shift    &kp RET  &lt RAISE SPACE  &td_game
+            >;
+        };
+
+        lower {
+            bindings = <
+&kp F1     &kp F2     &kp F3     &kp F4     &kp F5               XXX        &kp N7     &kp N8     &kp N9     &kp MINUS
+HML_C(F6)  HML_A(F7)  HML_G(F8)  HML_S(F9)  &kp F10              &kp QMARK  &kp N4     &kp N5     &kp N6     &kp N0
+&kp PSCRN  XXX        XXX        &kp F11    &kp F12              XXX        &kp N1     &kp N2     &kp N3     &kp EQUAL
+                                 ___        XXX      ___    ___  ___        ___
+            >;
+        };
+
+        raise {
+            bindings = <
+&kp LBRC     &kp LT       &kp GT       &kp RBRC     XXX                   XXX       XXX         XXX           XXX           XXX
+HML_C(LBKT)  HML_A(LPAR)  HML_G(RPAR)  HML_S(RBKT)  XXX                   XXX       &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT
+&kp PSCRN    &kp BSLH     &kp FSLH     &kp PIPE     XXX                   &kp C_PP  &kp C_PREV  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
+                                       ___          ___       ___    ___  XXX       ___
+            >;
+        };
+
+        game {
+            bindings = <
+&kp Q      &kp W       &kp E  &kp R    &kp T                            &kp Y   &kp U  &kp I  &kp O      &kp P
+&kp A      &kp S       &kp D  &kp F    &kp G                            &kp H   &kp J  &kp K  &kp L      &kp SQT
+&kp LCTRL  &kp LSHIFT  &kp X  &kp C    &kp V                            &kp B   &kp N  &kp M  &kp COMMA  &kp DOT
+                              &kp TAB  &mo LOW_G  &kp SPACE    &kp RET  ___     &to 0
+            >;
+        };
+
+        lower_game {
             bindings = <
 &kp F1   &kp F2    &kp F3  &kp F4   &kp F5               &kp DEL  &kp N7  &kp N8  &kp N9  &kp MINUS
 &kp F6   &kp F7    &kp F8  &kp F9   &kp F10              XXX      &kp N4  &kp N5  &kp N6  &kp N0
