@@ -7,6 +7,7 @@
 #include "zmk-helpers/key-labels/36.h"
 
 #include "definitions.dtsi"
+#include "behaviors.dtsi"
 
 / {
     chosen { zmk,physical-layout = &gggw_crosses_36_layout; };
