@@ -1,12 +1,10 @@
-/* Left trackball: pointer on normal layers */
-&trackball_peripheral_listener {
-    layers = < 1 >;
-};
-/ {
-    tb_left_scroll: tb_left_scroll {
-        compatible = "zmk,input-listener";
-        device = <&trackball_peripheral_split>;
-        layers = <SCROLL>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 4>;
+/* Right trackball: pointer normally, scroll while LH1 (&mo LOWER) is held */
+&trackball_central_listener {
+    scroll_on_lower {
+        layers = <1>; // LOWER, see definitions.dtsi
+        input-processors
+            = <&zip_xy_to_scroll_mapper>
+            , <&zip_scroll_scaler 1 4>
+            , <&zip_ble_report_rate_limit>;
     };
 };
