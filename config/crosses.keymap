@@ -3,6 +3,13 @@
 / {
     chosen { zmk,physical-layout = &gggw_crosses_36_layout; };
 
+    // Hold both central thumbs (LOWER/LOW_G + RAISE) for ADJUST
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        adjust     { if-layers = <LOWER RAISE>; then-layer = <ADJUST>; };
+        adjust_g   { if-layers = <LOW_G RAISE>; then-layer = <ADJUST>; };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -53,6 +60,16 @@ HML_C(LBKT)  HML_A(LPAR)  HML_G(RPAR)  HML_S(RBKT)  XXX                   XXX   
 &kp F6     &kp F7  &kp F8  &kp F9   &kp F10              &kp QMARK  &kp N4  &kp N5  &kp N6  &kp N0
 &kp PSCRN  XXX     XXX     &kp F11  &kp F12              XXX        &kp N1  &kp N2  &kp N3  &kp EQUAL
                            ___      XXX      ___    ___  ___        ___
+            >;
+        };
+
+        adjust {
+            display-name = "adjust";
+            bindings = <
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      XXX               XXX  XXX  XXX            XXX
+&bt BT_CLR    XXX           XXX           XXX           &out OUT_TOG      &studio_unlock    XXX  XXX  XXX            &bt BT_CLR
+&bootloader   &sys_reset    XXX           XXX           &bt BT_CLR_ALL    XXX               XXX  XXX  &sys_reset     &bootloader
+                                          XXX           ___          XXX  XXX               ___  XXX
             >;
         };
     };
