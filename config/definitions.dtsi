@@ -8,6 +8,7 @@
 #define RAISE  2
 #define BASE_G 3
 #define LOW_G  4
+#define ADJUST 5
 
 /*                              36 KEY MATRIX / LAYOUT MAPPING
   ╭────────────────────┬────────────────────╮ ╭─────────────────────┬─────────────────────╮

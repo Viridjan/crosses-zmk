@@ -1,8 +1,11 @@
+#include <dt-bindings/zmk/input_transform.h>
+
 // Overrides for the input-split child node
 &trackball_peripheral_split {
   device = <&trackball_peripheral>;
   input-processors
     = <&zip_xy_to_scroll_mapper>
     , <&zip_scroll_scaler 1 4>
+    , <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
     , <&zip_ble_report_rate_limit>;
 };
