@@ -12,10 +12,10 @@ ZMK_TAP_DANCE(td_game,  bindings = <&mo LOWER>, <&to BASE_G>;  tapping-term-ms =
 // Tap: sticky shift | Double tap: caps word | Hold: shift
 ZMK_TAP_DANCE(td_shift, bindings = <&sk LSHIFT>,<&caps_word>;  tapping-term-ms = <200>;)
 
-ZMK_COMBO(lclk,    &mkp LCLK,    RT1 RT2,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
-ZMK_COMBO(rclk,    &mkp RCLK,    RT2 RT3,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
-ZMK_COMBO(mclk,    &mkp MCLK,    RT3 RT4,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(lclk,    &mkp LCLK,    RT1 RT2,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(rclk,    &mkp RCLK,    RT2 RT3,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(mclk,    &mkp MCLK,    RT3 RT4,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
 
-ZMK_COMBO(esc,     &kp ESC,      LT4 LT3,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
-ZMK_COMBO(del,     &kp BSPC,     LT3 LT2,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
-ZMK_COMBO(canc,    &kp DEL,      LT2 LT1,     BASE BASE_G,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(esc,     &kp ESC,      LT4 LT3,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(del,     &kp BSPC,     LT3 LT2,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
+ZMK_COMBO(canc,    &kp DEL,      LT2 LT1,     BASE,    COMBO_TERM_FAST,    COMBO_IDLE_FAST)
