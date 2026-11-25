@@ -347,7 +347,7 @@ path.combo {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
 <a href="#LOWER">
 <text x="0" y="0" class="key tap layer-activator">LOWER</text>
-</a><text x="0" y="24" class="key hold">2x GAME</text>
+</a><text x="0" y="24" class="key hold"><tspan style="font-size: 78%">2x BASE_G</tspan></text>
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="64" width="28" height="26" class="combo"/>
@@ -667,8 +667,8 @@ path.combo {
 </g>
 </g>
 </g>
-<g transform="translate(30, 961)" class="layer-GAME">
-<text x="0" y="28" class="label" id="GAME">GAME:</text>
+<g transform="translate(30, 961)" class="layer-BASE_G">
+<text x="0" y="28" class="label" id="BASE_G">BASE_G:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 91)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
