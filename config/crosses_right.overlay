@@ -1,10 +1,16 @@
+#include <dt-bindings/zmk/input_transform.h>
+
 /* Right trackball: pointer normally, scroll while LH1 (&mo LOWER) is held */
 &trackball_central_listener {
+    // pointer speed x1.5 (base upstream: rate limit only)
+    input-processors = <&zip_xy_scaler 3 2>, <&zip_ble_report_rate_limit>;
+
     scroll_on_lower {
         layers = <1>; // LOWER, see definitions.dtsi
         input-processors
             = <&zip_xy_to_scroll_mapper>
             , <&zip_scroll_scaler 1 4>
+            , <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>
             , <&zip_ble_report_rate_limit>;
     };
 };
