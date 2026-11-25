@@ -39,20 +39,20 @@ HML_C(LBKT)  HML_A(LPAR)  HML_G(RPAR)  HML_S(RBKT)  XXX                   XXX   
         game {
             display-name = "game";
             bindings = <
-&kp Q      &kp W       &kp E  &kp R    &kp T                            &kp Y   &kp U  &kp I  &kp O      &kp P
-&kp A      &kp S       &kp D  &kp F    &kp G                            &kp H   &kp J  &kp K  &kp L      &kp SQT
-&kp LCTRL  &kp Z       &kp X  &kp C    &kp V                            &kp B   &kp N  &kp M  &kp COMMA  &kp DOT
-                              &kp TAB  &mo LOW_G  &kp SPACE    &kp RET  ___     &to 0
+&kp Q      &kp W  &kp E  &kp R    &kp T                                &kp Y   &kp U  &kp I  &kp O    &kp P
+&kp A      &kp S  &kp D  &kp F    &kp G                                &kp H   &kp J  &kp K  &kp L    &kp SQT
+&kp GRAVE  &kp Z  &kp X  &kp C    &kp V                                &kp B   &kp N  &kp M  &kp_cs   &kp_pc
+                         &kp TAB  &mo LOW_G  &td_shift    &kp RET  ___     &to BASE
             >;
         };
 
         lower_game {
             display-name = "game -1";
             bindings = <
-&kp F1   &kp F2    &kp F3  &kp F4   &kp F5               &kp DEL  &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp F6   &kp F7    &kp F8  &kp F9   &kp F10              XXX      &kp N4  &kp N5  &kp N6  &kp N0
-&kp ESC  &kp LALT  XXX     &kp F11  &kp F12              XXX      &kp N1  &kp N2  &kp N3  &kp EQUAL
-                           ___      ___      ___    ___  ___      ___
+&kp F1     &kp F2  &kp F3  &kp F4   &kp F5               &kp EXCL   &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp F6     &kp F7  &kp F8  &kp F9   &kp F10              &kp QMARK  &kp N4  &kp N5  &kp N6  &kp N0
+&kp PSCRN  XXX     XXX     &kp F11  &kp F12              XXX        &kp N1  &kp N2  &kp N3  &kp EQUAL
+                           ___      XXX      ___    ___  ___        ___
             >;
         };
     };
